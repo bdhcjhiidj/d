@@ -34,7 +34,7 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
     # https://stackoverflow.com/a/13891070/4723940
     kk = video_file.split("/")[-1]
     aa = kk.split(".")[-1]
-    out_put_file_name = kk.replace(f".{aa}", "(480p).mkv")
+    out_put_file_name = kk.replace(f".{aa}", "(@Anime_Complex).mkv")
     #out_put_file_name = video_file + "_compressed" + ".mkv"
     progress = output_directory + "/" + "progress.txt"
     with open(progress, 'w') as f:
@@ -43,9 +43,9 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
     ##"-metadata", "title=@SenpaiAF", "-vf", "drawtext=fontfile=njnaruto.ttf:fontsize=20:fontcolor=black:x=15:y=15:text=" "Dark Encodes",
      ## -vf eq=gamma=1.4:saturation=1.4
      ## lol 😂
-    crf.append("29")
+    crf.append("23")
     codec.append("libx264")
-    resolution.append("800x400")
+    resolution.append("1280x1080")
     preset.append("veryfast")
     audio_b.append("40k")
     watermark.append('-vf "drawtext=fontfile=font.ttf:fontsize=20:fontcolor=white:bordercolor=black@0.50:x=w-tw-10:y=10:box=1:boxcolor=black@0.5:boxborderw=6:text="')
